@@ -39,11 +39,6 @@ contract DAOBaseContract {
         _;
     }
 
-    // Функция инициализации ( принимает адрес токена)
-    function DAOBaseContract(ChangableToken _token){
-        token = _token;
-    }
-
     // Функция для предложения нового символа
     function newName(string _proposalName) public {
 

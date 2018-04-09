@@ -6,6 +6,11 @@ import "./DAOBaseContract.sol";
 // Контракт ДАО
 contract DAONameContract is DAOBaseContract {
 
+    // Функция инициализации ( принимает адрес токена)
+    function DAONameContract(ChangableToken _token){
+        token = _token;
+    }
+
     // Функция для смены имени токена
     function changeName() active public {
 
