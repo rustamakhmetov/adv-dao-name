@@ -8,7 +8,7 @@ contract DAOBaseContract {
     ChangableToken public token;
 
     // Минимальное число голосов
-    uint8 public minVotes;
+    uint8 public minVotes = 6;
 
     // Переменная для предложенного названия
     string public proposalName;

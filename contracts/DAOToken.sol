@@ -51,7 +51,7 @@ contract DAOToken is Stoppable {
     }
 
     // Внутренняя функция для перевода токенов
-    function _transfer(address _from, address _to, uint256 _value) stoppable internal {
+    function _transfer(address _from, address _to, uint256 _value) stoppable internal { //stoppable
         require(_to != 0x0);
         require(balanceOf[_from] >= _value);
         // Проверка того, что отправителю хватает токенов для перевода
@@ -108,8 +108,8 @@ contract DAOToken is Stoppable {
     }
 
     // Функция для смены названия токена
-    function changeSymbol(string _symbol) onlyDAO public {
-        symbol = _symbol;
+    function changeName(string _name) onlyDAO public {
+        name = _name;
     }
 
 }
